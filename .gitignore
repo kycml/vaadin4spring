@@ -1,6 +1,8 @@
 target/
 *.iml
 .idea/
-
+.project
+.settings
+.classpath
 spring-boot-sample/src/main/public/VAADIN/widgetsets
 spring-boot-sample/src/main/resources/VAADIN/themes/sample/styles.css

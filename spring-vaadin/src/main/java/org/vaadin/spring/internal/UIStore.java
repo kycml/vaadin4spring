@@ -38,8 +38,8 @@ import java.util.concurrent.ConcurrentHashMap;
 class UIStore implements Serializable, ClientConnector.DetachListener {
 
     private final Logger logger = LoggerFactory.getLogger(getClass());
-    private final Map<VaadinUIIdentifier, Map<String, Object>> objectMap = new ConcurrentHashMap<>();
-    private final Map<VaadinUIIdentifier, Map<String, Runnable>> destructionCallbackMap = new ConcurrentHashMap<>();
+    private final Map<VaadinUIIdentifier, Map<String, Object>> objectMap = new ConcurrentHashMap<VaadinUIIdentifier, Map<String,Object>>();
+    private final Map<VaadinUIIdentifier, Map<String, Runnable>> destructionCallbackMap = new ConcurrentHashMap<VaadinUIIdentifier, Map<String,Runnable>>();
 
     public VaadinUIIdentifier currentUiId() {
         final UI currentUI = UI.getCurrent();
@@ -112,7 +112,7 @@ class UIStore implements Serializable, ClientConnector.DetachListener {
     private Map<String, Object> getObjectMap(VaadinUIIdentifier uiId) {
         Map<String, Object> map = objectMap.get(uiId);
         if (map == null) {
-            map = new ConcurrentHashMap<>();
+            map = new ConcurrentHashMap<String, Object>();
             objectMap.put(uiId, map);
         }
         return map;
@@ -132,7 +132,7 @@ class UIStore implements Serializable, ClientConnector.DetachListener {
     private Map<String, Runnable> getDestructionCallbackMap(VaadinUIIdentifier uiId) {
         Map<String, Runnable> map = destructionCallbackMap.get(uiId);
         if (map == null) {
-            map = new ConcurrentHashMap<>();
+            map = new ConcurrentHashMap<String, Runnable>();
             destructionCallbackMap.put(uiId, map);
         }
         return map;

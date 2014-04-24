@@ -57,8 +57,8 @@
 
     <properties>
         <project.build.encoding>UTF-8</project.build.encoding>
-        <project.build.target>1.7</project.build.target>
-        <project.build.source>1.7</project.build.source>
+        <project.build.target>1.6</project.build.target>
+        <project.build.source>1.6</project.build.source>
         <vaadin.version>7.1.13</vaadin.version>
         <vaadin-touchkit.version>3.0.1</vaadin-touchkit.version>
         <spring.version>4.0.3.RELEASE</spring.version>
@@ -158,6 +158,19 @@
         </dependencies>
     </dependencyManagement>
 
+	<distributionManagement>
+		<repository>
+			<id>public-nexus-releases</id>
+			<name>Megafon public releases</name>
+			<url>http://144.76.139.130:8080/nexus/content/repositories/kyc-public-releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>public-nexus-snapshots</id>
+			<name>Megafon public shapshots</name>
+			<url>http://144.76.139.130:8080/nexus/content/repositories/kyc-public-snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+
     <build>
         <plugins>
             <plugin>
@@ -218,7 +231,7 @@
         <module>spring-boot-vaadin</module>
         <module>spring-vaadin</module>
         <module>spring-vaadin-security</module>
-        <module>spring-vaadin-touchkit</module>
+<!--         <module>spring-vaadin-touchkit</module> -->
         <module>spring-vaadin-stuff</module>
     </modules>
 </project>
