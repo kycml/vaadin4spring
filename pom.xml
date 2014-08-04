@@ -162,12 +162,12 @@
 		<repository>
 			<id>public-nexus-releases</id>
 			<name>Megafon public releases</name>
-			<url>https://144.76.139.130:8095/nexus/content/repositories/kyc-public-releases/</url>
+			<url>https://144.76.139.130:8095/nexus/content/repositories/shared-builds/</url>
 		</repository>
 		<snapshotRepository>
 			<id>public-nexus-snapshots</id>
 			<name>Megafon public shapshots</name>
-			<url>https://144.76.139.130:8095/nexus/content/repositories/kyc-public-snapshots/</url>
+			<url>https://144.76.139.130:8095/nexus/content/repositories/shared-snapshots/</url>
 		</snapshotRepository>
 	</distributionManagement>
 
