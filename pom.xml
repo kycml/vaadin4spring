@@ -5,9 +5,9 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>org.sonatype.oss</groupId>
-        <artifactId>oss-parent</artifactId>
-        <version>7</version>
+        <groupId>ru.megafon.datalabs</groupId>
+        <artifactId>public-superpom-hadoop</artifactId>
+        <version>1.1.0</version>
     </parent>
 
     <groupId>org.vaadin.spring</groupId>
@@ -20,7 +20,7 @@
         Spring, Spring Boot and Spring Security support for Vaadin applications
         (or the other way around, depending on your point of view).
     </description>
-    <url>https://github.com/peholmst/vaadin4spring</url>
+    <url>https://github.com/kycml/vaadin4spring</url>
 
     <licenses>
         <license>
@@ -28,12 +28,6 @@
             <url>http://www.apache.org/licenses/LICENSE-2.0.html</url>
         </license>
     </licenses>
-
-    <scm>
-        <url>https://github.com/peholmst/vaadin4spring</url>
-        <connection>scm:git:git@github.com:peholmst/vaadin4spring.git</connection>
-        <developerConnection>scm:git:git@github.com:peholmst/vaadin4spring.git</developerConnection>
-    </scm>
 
     <developers>
         <developer>
@@ -157,19 +151,6 @@
             </dependency>
         </dependencies>
     </dependencyManagement>
-
-	<distributionManagement>
-		<repository>
-			<id>public-nexus-releases</id>
-			<name>Megafon public releases</name>
-			<url>https://144.76.139.130:8095/nexus/content/repositories/shared-builds/</url>
-		</repository>
-		<snapshotRepository>
-			<id>public-nexus-snapshots</id>
-			<name>Megafon public shapshots</name>
-			<url>https://144.76.139.130:8095/nexus/content/repositories/shared-snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
 
     <build>
         <plugins>
